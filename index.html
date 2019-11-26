@@ -11,6 +11,39 @@
         <title>Dropdown Menu</title>
     </head>
     <body>
+        <!-- navbar caratterizza il componente ma servono almeno altre due classi: in questo caso aggiungo un expand-lg, per il comportamento in modalità desktop, e lo stile dei colori (largo alla fantasia: primary,secondary,warning,info,success,dark,light...) -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary justify-content-between">
+            <!-- il container serve per staccare il suo interno dai margini, in Boot4 ha anche una bella risposta responsive -->
+            <div class="container">
+                <a href="#" class="navbar-brand">My Revolut</a>
+
+                <!-- navbar garantisce la visualizzazione del ul, mr-auto sta per margin-right auto (disponibili anche ml, my per top and bottom, mx per left and right) -->
+                <ul class="navbar-nav mr-auto">
+                    <!-- nav-item serve solo alla muscolatura Js -->
+                    <li class="nav-item">
+                        <!-- nav-link ha funzione stilistica invece -->
+                        <a href="#" class="nav-link">Link1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Link2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Link3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Link4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Link5</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Link6</a>
+                    </li>
+                </ul>
+                <!-- aggiungiamo anche un semplice bottone minimamente stilato -->
+                <button class="btn btn-danger" type="button">Login</button>
+            </div>
+        </nav>
         <script src="script.js" charset="utf-8"></script>
     </body>
 </html>
