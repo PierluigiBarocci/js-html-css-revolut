@@ -1,20 +1,58 @@
-/* #esercizio {
+#esercizio {
     display: none;
-} */
-
+}
+#spot {
+    background-color: #e9ecef;
+}
 .main-menu {
-    background-color: red;
     height: 100px;
+    background-color: #007bff;
 }
 .main-left {
     float: left;
     width: 30%;
     height: 100px;
-    background-color: green;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.main-left img {
+    height: 50px;
 }
 .main-right {
     float: left;
     width: 70%;
     height: 100px;
-    background-color: blue;
+    text-align: right;
+}
+.main-right ul {
+    list-style: none;
+    padding-top: 40px;
+
+}
+.main-right li{
+    display: inline-block;
+    margin: 0 15px;
+}
+.main-right a {
+    text-decoration: none;
+    color: darkblue;
+}
+.dropdown {
+    position: relative;
+}
+.dropdown .dropdown-list {
+    position: absolute;
+    display: none;
+    transform: translateX(-25%);
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 6px 8px 35px -15px rgba(0,0,0,0.75);
+}
+.dropdown-list a {
+    padding: 10px;
+}
+.ending-page {
+    height: 500px;
+    background-color: #e9ecef;
 }
