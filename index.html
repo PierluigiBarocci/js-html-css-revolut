@@ -11,37 +11,57 @@
         <title>Dropdown Menu</title>
     </head>
     <body>
-        <!-- navbar caratterizza il componente ma servono almeno altre due classi: in questo caso aggiungo un expand-lg, per il comportamento in modalità desktop, e lo stile dei colori (largo alla fantasia: primary,secondary,warning,info,success,dark,light...) -->
-        <nav class="navbar navbar-expand-md navbar-dark bg-primary justify-content-between">
+        <!-- navbar caratterizza il componente ma servono almeno altre due classi: in questo caso aggiungo un expand-lg, per il comportamento in modalità desktop, e lo stile dei colori (largo alla fantasia: primary,secondary,warning,info,success,dark,light...)
+        py è il padding sull'asse Y (sempre a partire da 768px)-->
+        <nav class="navbar navbar-expand-md py-md-4 navbar-dark bg-primary justify-content-between">
             <!-- il container serve per staccare il suo interno dai margini, in Boot4 ha anche una bella risposta responsive -->
             <div class="container">
-                <a href="#" class="navbar-brand">My Revolut</a>
-
-                <!-- navbar garantisce la visualizzazione del ul, mr-auto sta per margin-right auto (disponibili anche ml, my per top and bottom, mx per left and right) -->
-                <ul class="navbar-nav mr-auto">
-                    <!-- nav-item serve solo alla muscolatura Js -->
-                    <li class="nav-item">
-                        <!-- nav-link ha funzione stilistica invece -->
-                        <a href="#" class="nav-link">Link1</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Link2</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Link3</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Link4</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Link5</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Link6</a>
-                    </li>
-                </ul>
-                <!-- aggiungiamo anche un semplice bottone minimamente stilato -->
-                <button class="btn btn-danger" type="button">Login</button>
+                <a href="#" class="navbar-brand">My Dropdown</a>
+                <!-- un navbar-toggler, all'interno di un expand, prende un display none automatico dalle @media di Boot4, in questo caso expand-md fa si che: min-width 768px display: none; -->
+                <!-- il data-toggle collapse si riferisce al data-target, che è specificato sotto Id più avanti -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                    <!-- questo è l'hamburger vero e proprio -->
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- interessante come, clickando l'hamburger, esso aggiunga o tolga la classe "show" a questo div, considerandolo "collapsed" oppure no  -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <!-- navbar garantisce la visualizzazione del ul, ml-auto sta per margin-left auto (disponibili anche mr, my per top and bottom, mx per left and right) -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- nav-item serve solo alla muscolatura Js -->
+                        <li class="nav-item">
+                            <!-- nav-link ha funzione stilistica invece -->
+                            <a href="#" class="nav-link">Link1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Link2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Link3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Link4</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Link5</a>
+                        </li>
+                        <!-- la classe dropdown assegna una position relative all'Item, lo prepara al suo sottomenu -->
+                        <li class="nav-item dropdown">
+                            <!-- prepariamo la freccettina per il dropdown -->
+                            <!-- e il toggle qua fa lo stesso lavoro che faceva l'hamburger più in alto, aggiunge e toglie classi "show" -->
+                            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown">Dropdown</a>
+                            <!-- la classe dropdown-menu fa tutto: stila e posiziona -->
+                            <div class="dropdown-menu mb-3">
+                                <a href="#" class="dropdown-item">Sottomenu1</a>
+                                <a href="#" class="dropdown-item">Sottomenu2</a>
+                                <a href="#" class="dropdown-item">Sottomenu3</a>
+                                <a href="#" class="dropdown-item">Sottomenu4</a>
+                                <a href="#" class="dropdown-item">Sottomenu5</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- aggiungiamo anche un semplice bottone minimamente stilato -->
+                    <button class="btn btn-danger ml-md-2 ml-sm-0" type="button">Login</button>
+                </div>
             </div>
         </nav>
         <script src="script.js" charset="utf-8"></script>
