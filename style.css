@@ -1,0 +1,20 @@
+/* #esercizio {
+    display: none;
+} */
+
+.main-menu {
+    background-color: red;
+    height: 100px;
+}
+.main-left {
+    float: left;
+    width: 30%;
+    height: 100px;
+    background-color: green;
+}
+.main-right {
+    float: left;
+    width: 70%;
+    height: 100px;
+    background-color: blue;
+}
